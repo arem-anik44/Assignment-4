@@ -47,13 +47,13 @@
 
     <!-- all page -->
 
-    <section class="mx-auto w-11/12 pt-15 ">    
+    <section id="all"  class=" mx-auto w-11/12 pt-15 ">    
         <h3 class="text-[20px] font-semibold">Available Jobs</h3>
 
         <div class="navigator-button pt-8">
-            <button class="btn btn-primary font-semibold text-[12px] mr-4 px-10">All</button>
-            <button class="btn mr-4 font-semibold text-[12px] px-6">Interview</button>
-            <button class="btn  font-semibold text-[12px] px-6">Rejected</button>
+            <button onclick="switchPage('all')" class="btn btn-primary font-semibold text-[12px] mr-4 px-10">All</button>
+            <button onclick="switchPage('interview')" class="btn mr-4 font-semibold text-[12px] px-6">Interview</button>
+            <button onclick="switchPage('rejected')" class="btn  font-semibold text-[12px] px-6">Rejected</button>
         </div>
 
         <div class="job-post-cards pt-10 flex flex-col gap-10">
@@ -257,13 +257,13 @@
     </section>
 
     <!-- interview page -->
-    <section class="mx-auto w-11/12 pt-15 hidden">    
+    <section id="interview"  class=" mx-auto w-11/12 pt-15 hidden">    
         <h3 class="text-[20px] font-semibold">Available Jobs</h3>
 
         <div class="navigator-button pt-8">
-            <button class="btn  font-semibold text-[12px] mr-4 px-10">All</button>
-            <button class="btn btn-primary mr-4 font-semibold text-[12px] px-6">Interview</button>
-            <button class="btn  font-semibold text-[12px] px-6">Rejected</button>
+            <button onclick="switchPage('all')" class="btn  font-semibold text-[12px] mr-4 px-10">All</button>
+            <button onclick="switchPage('interview')" class="btn btn-primary mr-4 font-semibold text-[12px] px-6">Interview</button>
+            <button onclick="switchPage('rejected')" class="btn  font-semibold text-[12px] px-6">Rejected</button>
         </div>
 
         <div class="job-post-cards pt-10 flex flex-col gap-10 hidden">
@@ -469,13 +469,13 @@
     </section>
 
     <!-- rejected page -->
-    <section class="mx-auto w-11/12 pt-15 hidden" >    
+    <section id="rejected"  class="mx-auto w-11/12 pt-15 hidden" >    
         <h3 class="text-[20px] font-semibold">Available Jobs</h3>
 
         <div class="navigator-button pt-8">
-            <button class="btn  font-semibold text-[12px] mr-4 px-10">All</button>
-            <button class="btn  mr-4 font-semibold text-[12px] px-6">Interview</button>
-            <button class="btn btn-primary font-semibold text-[12px] px-6">Rejected</button>
+            <button onclick="switchPage('all')" class="btn font-semibold text-[12px] mr-4 px-10">All</button>
+            <button onclick="switchPage('interview')" class="btn mr-4 font-semibold text-[12px] px-6">Interview</button>
+            <button onclick="switchPage('rejected')" class="btn btn-primary   font-semibold text-[12px] px-6">Rejected</button>
         </div>
 
         <div class="job-post-cards pt-10 flex flex-col gap-10 hidden">
@@ -679,6 +679,9 @@
             <p class="text-[#64748B]">Check back soon for new job opportunities</p>
         </div>
     </section>
+
+
+    <script src="./js/machine.js"></script>
     
 </body>
 </html>
