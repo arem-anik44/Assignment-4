@@ -46,3 +46,32 @@ function switchPage(clickButton)
         if(!checkHidden("interview")){document.querySelector("#interview").classList.toggle('hidden');}
     }
 }
+
+
+function setStatusInterview(button)
+{
+    const element = button.parentElement.querySelector("#status-btn");
+    element.innerText = "INTERVIEW";
+    element.style.color = 'white';
+    element.style.backgroundColor = "#00d390";
+
+
+    element.parentElement.classList.add('border-l-5');
+    element.parentElement.style.borderColor="#00d390";
+    
+    
+}
+
+function setStatusRejected(button)
+{
+    const element = button.parentElement.querySelector("#status-btn");
+    element.innerText = "REJECTED";
+    element.style.color = 'white';
+    element.style.backgroundColor = "#ff637d";
+
+
+    element.parentElement.classList.add('border-l-5');
+    element.parentElement.style.borderColor = "#ff637d";
+    
+}
+
