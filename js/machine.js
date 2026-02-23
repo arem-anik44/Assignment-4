@@ -10,6 +10,15 @@ function checkHidden(id){
     return element.classList.contains('hidden') ? 1 : 0;
 }
 
+function deletekaro(id){
+    const removeElement = document.getElementById(id);
+
+    if(removeElement){
+        removeElement.remove();
+        updateCount();
+    }
+}
+
 
 function switchPage(clickButton)
 {
@@ -104,11 +113,3 @@ function setStatusRejected(button)
 
 
 
-function deletekaro(id){
-    const removeElement = document.getElementById(id);
-
-    if(removeElement){
-        removeElement.remove();
-        updateCount();
-    }
-}
