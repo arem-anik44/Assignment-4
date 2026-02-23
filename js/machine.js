@@ -1,11 +1,13 @@
 
 function checkHidden(id){
-    const element = document.querySelector('#' + id)
+    const element = document.querySelector('#' + id);
 
-    if(element.classList.contains('hidden')=== true){
-        return 1;
+    if (!element) {
+        
+        return 0;
     }
-    else{return 0;} 
+
+    return element.classList.contains('hidden') ? 1 : 0;
 }
 
 
@@ -47,31 +49,47 @@ function switchPage(clickButton)
     }
 }
 
-
-function setStatusInterview(button)
-{
+function setStatusInterview(button) 
+{ 
     const element = button.parentElement.querySelector("#status-btn");
-    element.innerText = "INTERVIEW";
-    element.style.color = 'white';
-    element.style.backgroundColor = "#00d390";
+    const card = button.closest(".job-post-card");
 
+    const statusButton = card.querySelector("#status-btn");
 
+    statusButton.innerText = "INTERVIEW";
+    statusButton.style.backgroundColor = "#00d390";
+    statusButton.style.color = "white";
+
+    const addHtml = card.outerHTML;
     element.parentElement.classList.add('border-l-5');
     element.parentElement.style.borderColor="#00d390";
-    
-    
+
+    addElementToInterview(card);
+
+    updateCount();
 }
+
+
+
 
 function setStatusRejected(button)
 {
     const element = button.parentElement.querySelector("#status-btn");
-    element.innerText = "REJECTED";
-    element.style.color = 'white';
-    element.style.backgroundColor = "#ff637d";
 
+    const card = button.closest(".job-post-card");
 
+    const statusButton = card.querySelector("#status-btn");
+
+    statusButton.innerText = "REJECTED";
+    statusButton.style.backgroundColor = "#ff4d4d";
+    statusButton.style.color = "white";
     element.parentElement.classList.add('border-l-5');
     element.parentElement.style.borderColor = "#ff637d";
+
+    addElementToRejected(card);
+
+    updateCount();
+
     
 }
 
