@@ -107,3 +107,6 @@ function addElementToRejected(cardElement)
 
 
 
+
+
+

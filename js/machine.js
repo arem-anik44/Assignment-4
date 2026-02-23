@@ -54,11 +54,11 @@ function setStatusInterview(button)
     const element = button.parentElement.querySelector("#status-btn");
     const card = button.closest(".job-post-card");
 
-    const statusButton = card.querySelector("#status-btn");
+    
 
-    statusButton.innerText = "INTERVIEW";
-    statusButton.style.backgroundColor = "#00d390";
-    statusButton.style.color = "white";
+    element.innerText = "INTERVIEW";
+    element.style.backgroundColor = "#00d390";
+    element.style.color = "white";
 
     const addHtml = card.outerHTML;
     element.parentElement.classList.add('border-l-5');
@@ -78,11 +78,11 @@ function setStatusRejected(button)
 
     const card = button.closest(".job-post-card");
 
-    const statusButton = card.querySelector("#status-btn");
+    
 
-    statusButton.innerText = "REJECTED";
-    statusButton.style.backgroundColor = "#ff4d4d";
-    statusButton.style.color = "white";
+    element.innerText = "REJECTED";
+    element.style.backgroundColor = "#ff4d4d";
+    element.style.color = "white";
     element.parentElement.classList.add('border-l-5');
     element.parentElement.style.borderColor = "#ff637d";
 
@@ -93,3 +93,22 @@ function setStatusRejected(button)
     
 }
 
+
+
+
+
+
+
+
+
+
+
+
+function deletekaro(id){
+    const removeElement = document.getElementById(id);
+
+    if(removeElement){
+        removeElement.remove();
+        updateCount();
+    }
+}
