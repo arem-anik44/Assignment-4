@@ -28,7 +28,7 @@ Question -- 4 --- Ans ------------------
 
 Event Delegation is a event bubbling technique , it helps  to reduce multiple event listeners, all also work for dynamically add elements, actully its working procedure is instead of using many listeners in the child element , have add one in it's parent , parent listen the event of children and detect by using event.target
 
-Question -- 4 --- Ans --------------------
+Question -- 5 --- Ans --------------------
 
 preventDefault() work on stopping the browser's default action , for example it stops the any link from navigating
 stopPropagation() affect the event bubling up to root thus its affect the flow of events
